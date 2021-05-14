@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+}
+
+h2 {
+    color: #38cdff;
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-family: 'Lobster', cursive;
+    font-size: 28px;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+#header, #feature, #content, #footer, textarea {
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+a:link { /* --------- CSS pseudoclass 1 --------- */
+    color: #000;
+}
+
+a:visited { /* --------- CSS pseudoclass 2 --------- */
+    color: #000;
+}
+
+/* Header */
+
+#header {
+    align-items: center;
+    background: url("../images/header.png") no-repeat;
+    background-position: center top;
+    background-size: 80% 2px;
+    display: flex;
+    filter: brightness(95%); /* --------- CSS filter --------- */
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+#header .logo { /* --------- CSS combinator 1 --------- */
+    width: 30%;
+}
+
+#header .menu {
+    display: none;
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+#header .menu:hover { /* --------- CSS pseudoclass 3 --------- */
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Nav */
+
+#nav {
+    max-height: 290px;
+    width: 70%;
+    overflow: hidden;
+}
+
+.nav-transition {
+    transition: max-height 0.5s ease;
+}
+
+#nav div {
+    padding: 0 10px;
+}
+
+#nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+#nav ul > li { /* --------- CSS combinator 2 --------- */
+    display: inline-block;
+    list-style-type: none;
+    padding: 15px 25px;
+}
+
+#nav li a {
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#nav li a:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.active {
+    color: #fff;
+    background: #35b858;
+    border-radius: 3px;
+    padding: 8px 15px;
+}
+
+/* Feature */
+
+#feature {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    height: 380px;
+}
+
+#feature p {
+    font-family: 'Lobster', cursive;
+    font-size: 90px;
+}
+
+/* Content (Home) */
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#content .info {
+    display: flex;
+}
+
+#content .info p {
+    width: 50%;
+}
+
+#content .info p:first-child {
+    padding-right: 50px;
+}
+
+#content .info p:last-child {
+    padding-left: 50px;
+}
+
+#content .info.photography p {
+    padding: 0;
+    width: 100%;
+}
+
+#content .pics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 120px;
+    text-align: center;
+}
+
+#content .pics.features p {
+    width: 200px;
+}
+
+#content img {
+    border-radius: 50%;
+    width: 200px;
+}
+
+#content .pics h3 {
+    margin: 50px 0;
+}
+
+#content .newsletter {
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+    text-align: center;
+}
+
+#content .newsletter div:first-child {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+
+#content .newsletter input {
+    border: 0;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    height: 25px;
+}
+
+#content .newsletter button {
+    background: #35b858;
+    border: 2px solid #35b858;;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    margin-left: 25px;
+    padding: 2px 30px;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+#content .newsletter button:hover {
+    background: #fff;
+    color: #35b858;
+}
+
+/* Photographers */
+
+#content .pics.photography {
+    flex-direction: column;
+}
+
+#content .pics .staff {
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 100px;
+    text-align: left;
+    width: 100%;
+}
+
+#content .pics .staff:last-child {
+    margin-bottom: 0;
+}
+
+#content .pics .staff img {
+    height: 150px;
+    width: 150px;
+}
+
+#content .portrait p {
+    font-size: 25px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+#content .portrait i {
+    color: #fcba03;
+    margin: 0 5px;
+}
+
+#content .portrait i:hover {
+    cursor: grab;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in;
+}
+
+#content .bio {
+    margin-left: 70px;
+}
+
+#content .bio i {
+    margin-right: 10px;
+}
+
+#content .bio h3 {
+    margin: 0;
+}
+
+#content .bio p {
+    width: 100%;
+}
+
+/* Gallery */
+
+#content .heading.gallery {
+    align-items: center;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+#content .heading.gallery h2, #content .heading.gallery p {
+    width: 50%;
+}
+
+#content .heading.gallery p {
+    color: #fcba03;
+    text-align: right;
+}
+
+#content .collection {
+    align-items: center;
+    display: flex;
+    border: 5px dashed rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    height: 700px;
+    justify-content: center;
+}
+
+/* Services */
+
+#content .heading.services h2 {
+    margin-bottom: 40px;
+}
+
+#content .info.services {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+#content .info .column p {
+    margin: 0;
+    padding: 0;
+}
+
+#content .form {
+    font-family: 'Playfair Display', serif;
+    margin-top: 100px;
+}
+
+#content .form h2 {
+    color: #fcba03;
+    margin-bottom: 40px;
+}
+
+#content .form .form-flex {
+    display: flex;
+}
+
+#content .form .data {
+    margin-bottom: 50px;
+}
+
+#content .form .details {
+    margin: 70px 0 0 0;
+}
+
+#content .form .data div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#content .form .data div:first-child {
+    margin-right: 25px;
+}
+
+#content .form .data div:last-child {
+    margin-left: 25px;
+}
+
+#content .form input, #content .form textarea  {
+    border: 0;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    height: 25px; 
+    width: 100%;
+}
+
+#content .form form label {
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+#content .form .date div:first-child, #content .form .date div:last-child,  #content .form .details div:first-child,  #content .form .details div:last-child {
+    margin: 0;
+}
+
+#content .form .date div {
+    width: 47.5%;
+}
+
+#content .form .details div {
+    width: 100%;
+}
+
+#content .form textarea {
+    background:rgba(0, 0, 0, 0.03);
+    height: 250px;
+    padding: 8px;
+    resize: none;
+}
+
+#content .form .button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+#content .form button {
+    background: #35b858;
+    border: 2px solid #35b858;;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+#content .form button:hover {
+    background: #fff;
+    color: #35b858;
+}
+
+/* Footer */
+
+#footer-head {
+    background: url("../images/bkg.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+
+#footer {
+    align-items: center;
+    background: #35b858;
+    color: #fff;
+    display: flex;
+    height: 50px;
+}
+
+#footer p {
+    width: 50%;
+}
+
+#footer p:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+    #header, #feature, #content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Header */
+
+    #header {
+        background-size: 100% 5px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #header .logo {
+        width: 100%;
+    }
+
+    #header .logo h1 {
+        display: inline-block;
+        font-size: 30px;
+    }
+
+    #header .logo .menu {
+        align-items: center;
+        display: inline-block;
+        float: right;
+    }
+
+    #header #nav {
+        width: 100%;
+    }
+
+    /* Nav */
+
+    #nav ul {
+        flex-direction: column;
+    }
+
+    #nav li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    /* Feature */
+
+    #feature {
+        height: 200px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    #feature p {
+        font-size: 50px;
+    }
+
+    /* Content */
+
+    #content {
+        text-align: center;
+    }
+
+    #content .pics {
+        flex-direction: column;
+    }
+
+    #content .info {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #content .info p {
+        width: 100%;
+    }
+
+    #content .info p:first-child {
+        padding-right: 0;
+    }
+    
+    #content .info p:last-child {
+        padding-left: 0;
+    }
+
+    #content img {
+        padding-bottom: 10px;
+    }
+
+    #content img:last-child {
+        padding-bottom: 0;
+    }
+
+    #content .pics.features div {
+        margin-bottom: 50px;
+    }
+
+    #content .pics.features div:last-child {
+        margin-bottom: 0;
+    }
+
+    #content .pics.features p {
+        width: 100%;
+    }
+
+    #content .newsletter div div:last-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #content .newsletter button {
+        margin: 15px 0 0 0;
+    }
+
+    /* Photographers */
+
+    #content .pics.photography .staff {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #content .pics .staff {
+        align-items: center;
+    }
+
+    #content .pics.photography .staff .bio {
+        margin: 0;
+    }
+
+    /* Gallery */
+
+    #content .heading.gallery p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #content .collection {
+        height: 200px;
+    }
+
+    /* Services */
+
+    #content .form .date {
+        justify-content: space-around;
+    }
+
+    #content .form .button {
+        justify-content: space-around;
+    }
+
+
+    /* Footer */
+
+    #footer {
+        padding: 0 15px;
+    }
+
+    #footer p {
+        font-size: 14px;
+    }
+}
